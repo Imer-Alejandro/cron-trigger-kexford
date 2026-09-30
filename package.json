@@ -1,0 +1,14 @@
+{
+  "name": "boletin-kexford-cron",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Disparador periodico que llama al endpoint POST /worker/run del servidor de boletines. No accede a la base de datos.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

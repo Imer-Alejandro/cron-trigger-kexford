@@ -1,0 +1,17 @@
+services:
+  - type: cron
+    name: boletin-kexford-cron
+    runtime: node
+    plan: plan-crn-003
+    schedule: "*/5 * * * *"
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: RENDER_API_URL
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: API_EMAIL
+        sync: false
+      - key: REQUEST_TIMEOUT_MS
+        value: "50000"
